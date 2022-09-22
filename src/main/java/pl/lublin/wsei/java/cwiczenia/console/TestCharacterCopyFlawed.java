@@ -1,6 +1,7 @@
 package pl.lublin.wsei.java.cwiczenia.console;
 
 import java.io.*;
+import java.nio.charset.Charset;
 import java.time.Instant;
 
 public class TestCharacterCopyFlawed {
@@ -31,6 +32,8 @@ public class TestCharacterCopyFlawed {
                 out.close();
             }
         }
+
+        System.out.println("Domyślne kodowanie: " + Charset.defaultCharset().displayName());
 
         System.out.println("Czas wykonania w nanosekundach: " + (Instant.now().toEpochMilli() - startTime));
     }
